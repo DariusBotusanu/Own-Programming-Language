@@ -166,8 +166,9 @@ def scanning(file_name):
                 index = ST.search_or_add(token)
                 ta_index = TA['constant']
                 genPIF(token,ta_index,index)
-            else:###########
+            else:
                 print(f"Lexical error: Line {i} -> unidentified token: {token}")
+                return None
     
     dict_to_csv(PIF)
     dict_to_csv(TA)
